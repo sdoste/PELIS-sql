@@ -1,0 +1,36 @@
+Ver solo titulo y año
+SELECT titulo, year FROM `pelis`; 
+
+Todos las películas producidas a partir de cierto año, en orden ascendente o descendente
+SELECT * FROM `pelis`
+WHERE year >= 2000
+ORDER BY year ASC;
+
+SELECT * FROM `pelis`
+WHERE year >= 2000
+ORDER BY year DESC;
+
+Ordenar por titulo
+SELECT * FROM pelis
+ORDER BY titulo;
+
+Agrupar por género
+SELECT genero, COUNT(*) FROM pelis GROUP BY genero;
+
+Ver solo las pelis con recaudación menor que X
+SELECT * FROM pelis
+WHERE recaudacion < 100000000;
+
+Ver películas entre un año y otro de producción
+SELECT * FROM pelis
+WHERE year BETWEEN 1990 AND 2000;
+
+Ver cuántas pelis hay en la lista
+SELECT COUNT(*) FROM pelis;
+
+
+Ver la suma de todas las recaudaciones
+SELECT SUM(recaudacion) FROM pelis;
+
+Ver la media de las recaudaciones
+SELECT AVG(recaudacion) FROM pelis;
